@@ -1,0 +1,14 @@
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: ccdc-opensource/conan-azure-devops
+      ref: refs/heads/development
+      endpoint: github
+
+extends:
+  template: third-party-library-all-platforms-from-local-recipe.yml@templates
+  parameters:
+    package: qwt
+    package_version: 6.2.0
+    destination_repository: ccdc-3rdparty-conan
